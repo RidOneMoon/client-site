@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import img from "..//../assets/logo.png";
+import img from "..//../assets/logo1.png";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import useAuth from "../../hooks/useAuth";
 
