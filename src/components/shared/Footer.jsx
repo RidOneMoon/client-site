@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Style from "../footer/Style";
-import img from "..//../assets/logo.png";
+import img from "..//../assets/logo1.png";
 
 export default function Footer() {
   return (
