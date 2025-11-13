@@ -1,0 +1,10 @@
+  @import "tailwindcss";
+ @plugin "daisyui" {
+   themes: light --default;
+ }
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
