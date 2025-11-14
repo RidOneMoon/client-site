@@ -3,46 +3,46 @@ import { useNavigate } from "react-router-dom";
 
 
 const categories = [
-  // Double the categories for a better scrolling demonstration
+ 
   { name: "Pets", emoji: "🐶" },
   { name: "Pet Food", emoji: "🍖" },
   { name: "Accessories", emoji: "🧸" },
   { name: "Pet Care Products", emoji: "🧸" },
-  // Duplicates to fill the slide
+
 
 ];
 
-// --- Styles for a Wide Banner Look ---
 
-// Base style for the category card (Pill Badge style from previous example)
+
+
 const categoryCardStyle = {
   display: "flex",
   alignItems: "center",
   gap: "10px", 
-  padding: "12px 25px", // Increased padding for a chunkier banner look
+  padding: "12px 25px", 
   cursor: "pointer",
-  backgroundColor: "#ffffff", // Clean white background
-  borderRadius: "50px", // Fully rounded pill shape
-  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.08)", // Prominent shadow
+  backgroundColor: "#ffffff", 
+  borderRadius: "50px", 
+  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.08)", 
   transition: "all 0.3s ease-in-out", 
-  minWidth: "150px", // Ensure cards are wide enough to look like banner elements
-  flexShrink: 0, // Crucial: Prevents items from shrinking in the flex container
+  minWidth: "150px", 
+  flexShrink: 0, 
 };
 
 // Hover effect
 const categoryCardHoverStyle = {
-  backgroundColor: "#fff7e6", // Light yellow background on hover
-  border: "2px solid #ff9900", // Gold/Orange border for highlight
-  transform: "scale(1.05)", // Noticeable pop-out
+  backgroundColor: "#fff7e6",
+  border: "2px solid #ff9900",
+  transform: "scale(1.05)", 
   boxShadow: "0 6px 15px rgba(0, 0, 0, 0.15)",
 };
 
-// Emoji and Text Styles
+
 const emojiStyle = { fontSize: "24px" };
 const nameTextStyle = { fontWeight: 700, fontSize: "16px", color: "#333" };
 
 
-// --- Category Card Component (handles state and styling) ---
+
 const CategoryCard = ({ category, nav }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
@@ -67,7 +67,6 @@ const CategoryCard = ({ category, nav }) => {
   );
 };
 
-// --- Main Component: The Category Banner ---
 export default function CategorySection() {
   const nav = useNavigate();
 
@@ -78,28 +77,26 @@ export default function CategorySection() {
         marginBottom: 15, 
         fontSize: "24px", 
         color: "#1e1e1e", 
-        paddingLeft: "20px" // Align header with the content scroll area
+        paddingLeft: "20px" 
       }}>
         Featured Collections 🐾
       </h3>
-      
-      {/* The Sliding Banner Container */}
+   
       <div style={{
         display: "flex",
-        gap: 15, // Spacing between categories
-        overflowX: "scroll", // Enables the horizontal sliding behavior
-        padding: "10px 20px", // Horizontal padding for spacing from screen edges
-        // Optional: Hide the scrollbar for a cleaner look (requires CSS or styled-components normally)
-        msOverflowStyle: "none",  /* IE and Edge */
-        scrollbarWidth: "none",   /* Firefox */
-        WebkitOverflowScrolling: "touch", // Improves scrolling on iOS devices
+        gap: 15, 
+        overflowX: "scroll", 
+        padding: "10px 20px", 
+        msOverflowStyle: "none",  
+        scrollbarWidth: "none",  
+        WebkitOverflowScrolling: "touch", 
       }}>
         {categories.map(c => (
           <CategoryCard key={c.name} category={c} nav={nav} />
         ))}
       </div>
       
-      {/* Adding a visual separator/footer line */}
+ 
       <hr style={{ border: "none", borderTop: "1px solid #eeeeee", marginTop: 20 }} />
     </div>
   );
