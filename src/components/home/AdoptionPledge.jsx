@@ -13,7 +13,7 @@ export default function AdoptionPledge() {
         </p>
       </div>
 
-      {/* Embedded CSS for Styling */}
+      {/* my tailwind dont work for why added the plain css */}
       <style>{`
         .adoption-pledge-container {
           margin-top: 32px;
